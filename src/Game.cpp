@@ -149,7 +149,11 @@ void Game::ResetBall() {
 
     // Set initial speed and random direction
     float speed = 520.0f; // base speed in px/sec
-    float angle = static_cast<float>((std::rand() % 50 - 25) * M_PI / 180.0);
+
+    // MSVC doesn't guarantee M_PI unless specific macros are set; keep this portable.
+    constexpr float kPi = 3.14159265358979323846f;
+    float angle = static_cast<float>((std::rand() % 50 - 25) * kPi / 180.0f);
+
     // Random angle between -25 and +25 degrees for some vertical component
     float vx_sign = (std::rand() % 2 == 0) ? 1.0f : -1.0f;
     ball->vx = vx_sign * speed * std::cos(angle);

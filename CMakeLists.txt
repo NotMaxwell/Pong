@@ -12,6 +12,9 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 find_package(SDL3 REQUIRED CONFIG)
 find_package(SDL3_ttf REQUIRED CONFIG)
 
+# Use the normal C/C++ main() entry point (we don't want SDL_main.cpp added automatically)
+add_compile_definitions(SDL_MAIN_HANDLED)
+
 # --- Your executable ---
 add_executable(Pong
         main.cpp
