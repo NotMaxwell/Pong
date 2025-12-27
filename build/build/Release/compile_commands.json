@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/Users/maxmccormick/CLionProjects/Pong/build/build/Release",
+  "command": "/usr/bin/c++ -DFFI_STATIC_BUILD -DGL_SILENCE_DEPRECATION=1 -DPCRE2_STATIC -DPLUTOSVG_BUILD_STATIC -DPLUTOSVG_HAS_FREETYPE -isystem /Users/maxmccormick/.conan2/p/b/sdlbc327a82dfa45/p/include -isystem /Users/maxmccormick/.conan2/p/b/sdl_taeb5067f1b670/p/include -stdlib=libc++ -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.1.sdk -o CMakeFiles/Pong.dir/main.cpp.o -c /Users/maxmccormick/CLionProjects/Pong/main.cpp",
+  "file": "/Users/maxmccormick/CLionProjects/Pong/main.cpp",
+  "output": "CMakeFiles/Pong.dir/main.cpp.o"
+},
+{
+  "directory": "/Users/maxmccormick/CLionProjects/Pong/build/build/Release",
+  "command": "/usr/bin/c++ -DFFI_STATIC_BUILD -DGL_SILENCE_DEPRECATION=1 -DPCRE2_STATIC -DPLUTOSVG_BUILD_STATIC -DPLUTOSVG_HAS_FREETYPE -isystem /Users/maxmccormick/.conan2/p/b/sdlbc327a82dfa45/p/include -isystem /Users/maxmccormick/.conan2/p/b/sdl_taeb5067f1b670/p/include -stdlib=libc++ -O3 -DNDEBUG -std=c++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.1.sdk -o CMakeFiles/Pong.dir/src/Game.cpp.o -c /Users/maxmccormick/CLionProjects/Pong/src/Game.cpp",
+  "file": "/Users/maxmccormick/CLionProjects/Pong/src/Game.cpp",
+  "output": "CMakeFiles/Pong.dir/src/Game.cpp.o"
+}
+]
