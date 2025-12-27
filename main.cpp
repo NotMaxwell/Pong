@@ -1,52 +1,25 @@
+// Pong Clone with SDL3 on macOS
+// Enhanced Pong clone using modern C++17 and SDL3/SDL3_ttf
+// 
+// Controls:
+// - Left paddle: W/S or Up/Down arrow keys
+// - Difficulty: Press 1 (Easy), 2 (Medium), 3 (Hard)
+// - ESC quits
 //
-// Created by Willi on 11/10/2024.
-//
+// Features:
+// - Smooth ball physics with subpixel movement
+// - AI-controlled right paddle with predictive trajectory tracking
+// - Adjustable difficulty levels
+// - On-screen scoring with SDL3_ttf
 
-#include <SDL.h>
-#include <SDL_ttf.h>
-
-const int WINDOW_WIDTH = 1280;
-const int WINDOW_HEIGHT = 720;
+#include "src/Game.h"
 
 int main(int argc, char* argv[]) {
-    //test SDL
-    SDL_Init(SDL_INIT_VIDEO);
-
-    SDL_Window* window = SDL_CreateWindow("Pong", 0, 0, WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_SHOWN);
-    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, 0);
-
-    //Game logic
-    bool running = true;
-
-    while(running) {
-        SDL_Event event;
-        while (SDL_PollEvent(&event)) {
-            if(event.type == SDL_QUIT) {
-                running = false;
-            }
-            else if(event.type == SDL_KEYDOWN) {
-                if(event.key.keysym.sym == SDLK_ESCAPE){
-                    running = false;
-                }
-            }
-        }
-
-        //clear window
-        SDL_SetRenderDrawColor(renderer, 0x0, 0x0, 0x0, 0xFF);
-        SDL_RenderClear(renderer);
-
-        //rendereing
-
-
-        //Present back buffer
-        SDL_RenderPresent(renderer);
+    Game pongGame(800, 600);
+    if (!pongGame.Init()) {
+        return 1; // Initialization failed (error already logged)
     }
-    //Cleanup
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
-    SDL_Quit();
-
+    pongGame.Run();
+    // Game destructor will handle cleanup
     return 0;
 }
-
-

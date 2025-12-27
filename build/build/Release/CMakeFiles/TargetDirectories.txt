@@ -1,0 +1,3 @@
+/Users/maxmccormick/CLionProjects/Pong/build/build/Release/CMakeFiles/Pong.dir
+/Users/maxmccormick/CLionProjects/Pong/build/build/Release/CMakeFiles/edit_cache.dir
+/Users/maxmccormick/CLionProjects/Pong/build/build/Release/CMakeFiles/rebuild_cache.dir

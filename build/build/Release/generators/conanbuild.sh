@@ -1,0 +1,1 @@
+. "/Users/maxmccormick/CLionProjects/Pong/build/build/Release/generators/conanbuildenv-release-armv8.sh"
